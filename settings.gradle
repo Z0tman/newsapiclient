@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    buildscript {
+        dependencies {
+            def nav_version = "2.5.1"
+            classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+            classpath 'com.google.dagger:hilt-android-gradle-plugin:2.43.2'
+        }
+    }
+}
+rootProject.name = "newsapiclient"
+include ':app'
